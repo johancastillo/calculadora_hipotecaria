@@ -62,32 +62,6 @@ var validarRadios = function(){
 	}
 };
 
-var validarCheckbox = function(){
-	var opciones = document.getElementsByName('terminos'),
-		resultado = false;
-
-	for (var i = 0; i < elementos.length; i++) {
-		if(elementos[i].type == "checkbox"){
-			for (var o = 0; o < opciones.length; o++) {
-				if (opciones[o].checked) {
-					resultado = true;
-					break;
-				}
-			}
-
-			if (resultado == false) {
-				elementos[i].parentNode.className = elementos[i].parentNode.className + " error";
-				console.log('El campo checkbox esta incompleto');
-				return false;
-			} else {
-				// Eliminamos la clase Error del checkbox
-				elementos[i].parentNode.className = elementos[i].parentNode.className.replace(" error", "");
-				return true;
-			}
-		}
-	}
-};
-
 var enviar = function(e){
 	if (!validarInputs()) {
 		console.log('Falto validar los Input');

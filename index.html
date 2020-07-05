@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/tabla.css">
 	<title>Calculadora hipotecaria</title>
 </head>
 <body>
@@ -15,28 +16,28 @@
 					<p style="color: #000;">¿Cuanto cuesta la casa que quieres?</p>
 					<br>
 					<div class="input-group">
-						<input type="text" id="correo" name="correo">
-						<label class="label" for="correo">Ingresa cantidad ($):</label>
+						<span><input type="text" name="credito" maxlength=9 placeholder="Ingresa cantidad($)"></span>
 					</div>
 
 					<p style="color: #000;">¿Cuanto tiempo necesitas para pagar?</p>
 					<br>
 					<div class="input-group">
-						<input type="text" id="pass" name="pass">
-						<label class="label" for="pass">Años de hipoteca:</label>
+						<span><input type="text" name="anos" maxlength=2 placeholder="Años de hipoteca"></span>
 					</div>
 
 					<div class="input-group">
-						<input type="text" id="correo" name="correo">
-						<label class="label" for="correo">Tipo de interés (%):</label>
+						<span><input type="text" name="interes" maxlength=9 placeholder="Tipo de interés"></span>
 					</div>
 
-					<input type="submit" id="btn-submit" value="Calcular">
+					<input type="button" value="Calcular" id="btn">
 				</div>
 			</form>
 		</div>
 	</div>
 
-	<script src="js/formulario.js"></script>
+	<div id="resultado"></div>
+
+	<script src="js/fromulario.js"></script>
+	<script src="js/calculos.js"></script>
 </body>
 </html>
