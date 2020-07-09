@@ -6,9 +6,10 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/tabla.css">
+	<link rel="stylesheet" href="css/checkbox.css">
 
 	<link  rel="icon" href="img/logo.png" type="image/png" />
-	<title>Calculadora hipotecaria</title>
+	<title>Calculadora Hipotecaria</title>
 </head>
 <body>
 	<div class="contenedor-formulario">
@@ -31,7 +32,23 @@
 						<span><input type="text" name="interes" maxlength=9 placeholder="Tipo de interés"></span>
 					</div>
 
-					<input type="button" value="Calcular" id="btn">
+					<p style="color: #000;">Down Payment</p>
+					<br>
+
+					<div class="radio">
+							<input type="radio" name="sexo" id="hombre">
+							<label for="hombre">3,5%</label>
+
+							<input type="radio" name="sexo" id="mujer">
+							<label for="mujer">5%</label>
+
+							<input type="radio" name="sexo" id="alien">
+							<label for="alien">10%</label>
+					</div>
+
+					<br>
+
+					<input type="button" value="CALCULAR" id="btn">
 				</div>
 			</form>
 		</div>

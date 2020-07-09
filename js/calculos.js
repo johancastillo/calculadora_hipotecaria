@@ -119,7 +119,7 @@ btn.onclick = () =>{
 
     let div=document.createElement("div");
 
-    let txt=document.createTextNode("Pago total de intereses : "+totalInt.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" €");
+    let txt=document.createTextNode("Pago total de intereses : "+totalInt.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $");
 
     div.appendChild(txt);
 

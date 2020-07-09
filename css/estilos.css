@@ -107,7 +107,7 @@ body {
           display: none; }
         .contenedor-formulario .formulario .input-group.radio input[type="radio"]:checked + label {
           padding: 5px 15px;
-          background: #303F9F;
+          background: #f1cb3f;
           border-radius: 2px;
           color: #f2f2f2; }
       .contenedor-formulario .formulario .input-group.checkbox label:before {

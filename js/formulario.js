@@ -9,7 +9,7 @@ var formulario = document.formulario_registro,
 var validarInputs = function(){
 	for (var i = 0; i < elementos.length; i++) {
 		// Identificamos si el elemento es de tipo texto, email, password, radio o checkbox
-		if (elementos[i].type == "text" || elementos[i].type == "email" || elementos[i].type == "password") {
+		if (elementos[i].type == "text") {
 			// Si es tipo texto, email o password vamos a comprobar que esten completados los input
 			if (elementos[i].value.length == 0) {
 				console.log('El campo ' + elementos[i].name + ' esta incompleto');
@@ -21,26 +21,15 @@ var validarInputs = function(){
 		}
 	}
 
-	// Comprobando que las contraseñas coincidan
-	if (elementos.pass.value !== elementos.pass2.value) {
-		elementos.pass.value = "";
-		elementos.pass2.value = "";
-		elementos.pass.className = elementos.pass.className + " error";
-		elementos.pass2.className = elementos.pass2.className + " error";
-	} else {
-		elementos.pass.className = elementos.pass.className.replace(" error", "");
-		elementos.pass2.className = elementos.pass2.className.replace(" error", "");
-	}
-
 	return true;
 };
 
 var validarRadios = function(){
-	var opciones = document.getElementsByName('sexo'),
-		resultado = false;
+	var opciones = document.getElementsByName('downpayment'),
+		  resultado = false;
 
 	for (var i = 0; i < elementos.length; i++) {
-		if(elementos[i].type == "radio" && elementos[i].name == "sexo"){
+		if(elementos[i].type == "radio" && elementos[i].name == "downpayment"){
 			// Recorremos los radio button
 			for (var o = 0; o < opciones.length; o++) {
 				if (opciones[o].checked) {
@@ -51,7 +40,7 @@ var validarRadios = function(){
 
 			if (resultado == false) {
 				elementos[i].parentNode.className = elementos[i].parentNode.className + " error";
-				console.log('El campo sexo esta incompleto');
+				console.log('El campo Down Payment esta incompleto');
 				return false;
 			} else {
 				// Eliminamos la clase Error del radio button
