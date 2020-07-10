@@ -43,9 +43,9 @@ btn.onclick = () =>{
 
     const m = (deuda * interes * (Math.pow((1 + interes),(anos * 12)))) / ((Math.pow((1 + interes),(anos * 12))) - 1);
 
+    capitalInicial = deuda + downpayment;
 
-
-    resultado.innerHTML='<div class="results"><h2>Capital Inicial: '+deuda.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Down Payment: "+downpayment.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</h2></div><br>";
+    resultado.innerHTML='<div class="results"><h2>Capital Inicial: '+capitalInicial.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Down Payment: "+downpayment.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</h2></div><br>";
 
 
     // cramos un objeto table donde poner el resultado
