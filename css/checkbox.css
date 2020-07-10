@@ -1,49 +1,29 @@
-/* ----- ----- ----- ----- */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
-
-body {
-  font-size: 16px;
-  background: #fff;
-  font-family: "Roboto"; }
-
-a {
-  color: #FF4136; }
-
 .wrap {
   width: 90%;
   max-width: 1000px;
-  margin: auto; }
+  margin: auto;
+}
 
 .info {
   text-align: center;
   padding: 20px;
   color: #001F3F;
-  border-bottom: 1px solid #ccc; }
-  .info p {
-    margin-top: 20px; }
+  border-bottom: 1px solid #ccc;
+}
 
-.formulario {
-  /* --------------------------------------- */
-  /* ----- Radio Button */
-  /* --------------------------------------- */
-  /* --------------------------------------- */
-  /* ----- Checkbox */
-  /* --------------------------------------- */ }
-  .formulario h2 {
+.formulario h2 {
     font-size: 16px;
     color: #001F3F;
     margin-bottom: 20px;
-    margin-left: 20px; }
+    margin-left: 20px;
+  }
+
   .formulario > div {
     padding: 20px 0;
-    border-bottom: 1px solid #ccc; }
-  .formulario .radio label,
-  .formulario .checkbox label {
+    border-bottom: 1px solid #ccc;
+  }
+
+  .formulario .radio label{
     display: inline-block;
     cursor: pointer;
     color: #FF4136;
@@ -53,12 +33,14 @@ a {
     border-radius: 5px;
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    transition: all 0.3s ease; }
-    .formulario .radio label:hover,
-    .formulario .checkbox label:hover {
-      background: rgba(255, 65, 54, 0.1); }
-    .formulario .radio label:before,
-    .formulario .checkbox label:before {
+    transition: all 0.3s ease;
+  }
+
+    .formulario .radio label:hover{
+      background: rgba(255, 65, 54, 0.1);
+    }
+
+    .formulario .radio label:before {
       content: "";
       display: inline-block;
       width: 17px;
@@ -67,23 +49,16 @@ a {
       left: 15px;
       border-radius: 50%;
       background: none;
-      border: 3px solid #FF4136; }
-  .formulario input[type="radio"] {
-    display: none; }
-    .formulario input[type="radio"]:checked + label:before {
-      display: none; }
+      border: 3px solid #FF4136;
+    }
+
+  .formulario input[type="radio"] {display: none;}
+
+    .formulario input[type="radio"]:checked + label:before {display: none;}
+
     .formulario input[type="radio"]:checked + label {
       padding: 5px 15px;
-      background: #FF4136;
+      background: #F1CB3F;
       border-radius: 2px;
-      color: #fff; }
-  .formulario .checkbox label:before {
-    border-radius: 3px; }
-  .formulario .checkbox input[type="checkbox"] {
-    display: none; }
-    .formulario .checkbox input[type="checkbox"]:checked + label:before {
-      display: none; }
-    .formulario .checkbox input[type="checkbox"]:checked + label {
-      background: #FF4136;
       color: #fff;
-      padding: 5px 15px; }
+    }

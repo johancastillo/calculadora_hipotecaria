@@ -1,31 +1,27 @@
-body{
-  font-family: Arial;
+/*Tabla de resuktados*/
+#resultado table{
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  background-color: white;
+  border-collapse: collapse;
 }
-
-.title{text-align: center;}
 
 .main-container{
   margin: 150px auto;
   width: 600px;
 }
 
-table{
-  width: 100%;
-  background-color: white;
-  border-collapse: collapse;
-  text-align: left;
+#resultado th, td{
+  padding: 10px;
 }
 
-th, td{
-  padding: 20px;
-}
-
-thead{
-  background-color: #246355;
+#resultado thead{
+  background-color: #23282e;
   color: white;
   border-bottom: solid 5px #0F362D;
 }
 
-tr:nth.child(even){
+#resultado tr:nth.child(even){
   background-color: #ddd;
 }

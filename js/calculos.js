@@ -45,12 +45,12 @@ btn.onclick = () =>{
 
 
 
-    resultado.innerHTML="<div>Capital Inicial: "+deuda.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $" + "<br>Down Payment: "+downpayment.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $" + "<br>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</div>";
+    resultado.innerHTML='<div class="results"><h2>Capital Inicial: '+deuda.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Down Payment: "+downpayment.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $</h2>" + "<br><h2>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</h2></div><br>";
 
 
     // cramos un objeto table donde poner el resultado
 
-    const table=document.createElement("table");
+    const table = document.createElement("table");
 
     table.setAttribute("border",1);
 
@@ -62,13 +62,15 @@ btn.onclick = () =>{
 
     // titulo de la tabla
 
-    let tr=document.createElement("tr");
+    let thead = document.createElement("thead");
+
+    let tr = document.createElement("tr");
 
     for (let text of ["Mes", "Intereses", "Amortización", "Capital Pendiente"]) {
 
-        let th=document.createElement("th");
+        let th = document.createElement("th");
 
-        let txt=document.createTextNode(text);
+        let txt = document.createTextNode(text);
 
         th.appendChild(txt);
 
@@ -76,7 +78,8 @@ btn.onclick = () =>{
 
     }
 
-    table.appendChild(tr);
+    thead.appendChild(tr);
+    table.appendChild(thead);
 
 
 
@@ -116,7 +119,7 @@ btn.onclick = () =>{
 
         tr.appendChild(td);
 
-        deuda=deuda-(m-(deuda*interes));
+        deuda = deuda - ( m - (deuda * interes));
 
         td=document.createElement("td");
 
@@ -142,9 +145,11 @@ btn.onclick = () =>{
 
     resultado.appendChild(table);
 
-    let div=document.createElement("div");
+    let div = document.createElement("h2");
 
-    let txt=document.createTextNode("Pago total de intereses : "+totalInt.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $");
+    div.style = "text-align: center; margin-top: 10px;";
+
+    let txt = document.createTextNode("Pago total de intereses: "+totalInt.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $");
 
     div.appendChild(txt);
 
