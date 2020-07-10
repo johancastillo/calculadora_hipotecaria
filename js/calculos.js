@@ -2,6 +2,26 @@ var btn = document.querySelector("#btn");
 
 btn.onclick = () =>{
 
+  let downpayment;
+
+  //Obteniendo el radio button seleccionado por el usuario
+  const validarRadio = () => {
+    var s = "no";
+
+    for(let i = 0; i < document.formulario_registro.sexo.length; i++){
+      if(document.formulario_registro.sexo[i].checked){
+        downpayment = parseFloat(document.formulario_registro.sexo[i].value);
+        s = "si"
+      }
+    }
+
+    if(s == "no"){
+      alert("Debe seleccionar un Down Payment");
+    }
+  }
+
+  validarRadio();
+
     let deuda = parseFloat(document.querySelector("input[name=credito]").value);
 
     let anos = parseInt(document.querySelector("input[name=anos]").value);
@@ -10,8 +30,13 @@ btn.onclick = () =>{
 
     const resultado = document.getElementById("resultado");
 
+    //Calcular el Down Payment
+    const funcdownpayment = () => {
+      downpayment = downpayment * deuda / 100;
+      deuda = deuda - downpayment;
+    }
 
-
+    funcdownpayment();
     // hacemos los calculos...
 
     interes = (interes / 100) / 12;
@@ -20,7 +45,7 @@ btn.onclick = () =>{
 
 
 
-    resultado.innerHTML="<div>Capital Inicial: "+deuda.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $" + "<br>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</div>";
+    resultado.innerHTML="<div>Capital Inicial: "+deuda.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $" + "<br>Down Payment: "+downpayment.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+ " $" + "<br>Cuota a pagar mensualmente: "+m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2})+" $</div>";
 
 
     // cramos un objeto table donde poner el resultado
